@@ -1,4 +1,5 @@
 #include <iostream> 
+#include <iomanip> // Để setprecision cho TinhLuong bên dưới
 #define AN_TRUA 600000
 #define DI_LAI 300000
 using namespace std; 
@@ -10,10 +11,11 @@ private:
 	string birth; 
 	int phone_number; 
 public: 
-	NhanVien()
+	NhanVien() // Thiếu default constructor thì 
+		   // constructor của subclass không hoạt động được
 	{}
 	NhanVien(string name, string address,
-			string birth, int phone_number)
+			string birth, int phone_number) // Viết cho chắc thôi 
 	{
 		this -> name = name; 
 		this -> address = address;
@@ -124,7 +126,7 @@ void FullTime::Nhap()
 /*---------------------Xuat------------------------*/
 void NhanVien::Xuat()
 { 
-
+	/* Hoàn thiện hàm */
 }
 void PartTime::Xuat()
 {
